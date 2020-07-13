@@ -1,0 +1,18 @@
+body {
+  background-color: white;  
+}
+
+.door {
+  width: 25rem;
+  height: 45rem;
+  border: 10px solid #bc88fc;
+  background-color: #88fcca;
+}
+
+.room {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: white;
+}
