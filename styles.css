@@ -27,7 +27,7 @@ body {
 }
 
 .open {
-  transform: perspective(100rem) rotateY(-87deg);
+  transform: perspective(100rem) rotateY(-90deg);
 }
 
 .zoomFrame {
@@ -39,6 +39,7 @@ body {
   background-color: #88fcca;
   box-shadow: 0rem 0rem 5rem 4rem #88fcca;
   transition: transform 3s ease;
+  cursor: crosshair;
 }
 
 .wiggle {

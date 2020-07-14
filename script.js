@@ -8,12 +8,17 @@ var
 
 function openDoor() {
   door.classList.add('open')
-  doorIsOpen = true
-  // frame.onclick = zoomFrame
 }
 
 function zoomFrame() {
-  frame.classList.add('zoomFrame')
+  console.log('zoomframe')
+  if (doorIsOpen) {
+    frame.classList.add('zoomFrame')
+  } else {
+    doorIsOpen = true
+    console.log('doorisopen')
+  }
 }
 
 door.onclick = openDoor
+frame.onclick = zoomFrame
