@@ -5,14 +5,15 @@ body {
 .door {
   width: 25rem;
   height: 45rem;
-  border: 0.7rem dashed black;
-  background-color: #88fcca;
+  border: 0.7rem solid #bc88fc;
+  background-color: white;
   display: flex;
   justify-content: space-around;
   align-items: center;
   /* transition: transform 0.4s ease;
   transform-origin: top left; */
   /* transform: perspective(5rem); */
+  box-shadow: 0 0 5rem 1rem #88fcca
 }
 
 .door:hover {
