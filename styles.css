@@ -2,10 +2,11 @@ body {
   overflow: hidden;  
 }
 
+/* OBJECTS */
 .door {
-  width: 25rem;
+  width: 80rem;
   height: 70vh;
-  border: 0.7rem solid #bc88fc;
+  border: 2rem solid #bc88fc;
   background-color: white;
   display: flex;
   justify-content: space-around;
@@ -19,27 +20,53 @@ body {
   margin: 0. 0.7rem;
 }
 
-.door:hover {
-  /* transform: perspective(5rem); */
-  /* transform: rotate3d(0, -2, 0, -0.2turn) perspective(5rem); */
-  /* transform: translateX(-12.5rem) rotate3d(0, -2, 0, -0.2turn); */
-  /* perspective: 20rem; */
-}
 
-.open {
-  transform: perspective(100rem) rotateY(-90deg);
-}
-
-.zoom300 {
-  transform: scale(300%);
-}
 
 .frame {
-  border: 0.7rem dashed #bc88fc;
+  border: 2rem dashed #bc88fc;
   background-color: #88fcca;
   box-shadow: 0rem 0rem 5rem 4rem #88fcca;
   transition: transform 3s ease;
   cursor: crosshair;
+}
+
+.handle {
+  width: 10rem;
+  height: 3rem;
+  background-color: transparent;
+  transition: transform 0.3s ease;
+  transform-origin: center left;
+  margin-left: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.handle-inner {
+  background-color: #bc88fc;
+  width: 10rem;
+  height: 2rem;
+}
+
+.shelf {
+  width: 5rem;
+  height: 2rem;
+  background-color: #ad987c;
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  bottom: 100px;
+  left: 100px;
+}
+
+/* STATES */
+
+.open {
+  transform: perspective(300rem) rotateY(-90deg);
+}
+
+.zoom300 {
+  transform: scale(300%);
 }
 
 .wiggle {
@@ -49,6 +76,28 @@ body {
   animation-direction: alternate;
 }
 
+
+
+.room {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: white;
+}
+
+
+
+.hidden {
+  display: none;
+}
+
+/* .handle-inner:hover {
+  background-color: inherit;
+} */
+
+
+/* ANIMATION */
 @keyframes wiggle {
   /* from {
     transform: rotate(0deg)
@@ -65,47 +114,4 @@ body {
   to {
     transform: rotate(20deg);
   }
-}
-
-.room {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  background-color: white;
-}
-
-.handle {
-  width: 5rem;
-  height: 3rem;
-  background-color: transparent;
-  transition: transform 0.3s ease;
-  transform-origin: center left;
-  margin-left: 12rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.handle-inner {
-  background-color: #bc88fc;
-  width: 5rem;
-  height: 0.7rem;
-}
-
-/* .handle-inner:hover {
-  background-color: inherit;
-} */
-
-.handle:hover {
-  transform: rotate(45deg);
-  cursor: grab;
-}
-
-.rotated {
-  transform: rotate(90deg)
-}
-
-.invisible {
-  background-color: transparent;
 }

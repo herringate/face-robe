@@ -1,11 +1,13 @@
 var
   door = document.getElementsByClassName('door')[0],
   frame = document.getElementsByClassName('frame')[0],
-  handle = document.getElementsByClassName('handle')[0]
+  handle = document.getElementsByClassName('handle')[0],
+  shelf = document.getElementsByClassName('shelf')[0]
+
 var    
   doorIsOpen = false,
   frameIsZoomed = false,
-  state = 0
+  state = -1
 
 function tick() {
   const prevState = state
@@ -30,15 +32,21 @@ function checkState(prevState, state) {
       case 2:
         frame.classList.add('zoom300')
         break
+      case 3:
+        shelf.classList.remove('hidden')
+        break
     }
   } else {
     switch(state) {
       case 0:
         door.classList.remove('open')
+        break
       case 1:
         frame.classList.remove('zoom300')
+        break
       case 2:
-        zoomFrame()
+        shelf.classList.add('hidden')
+        break
     }
   }
 }
@@ -66,3 +74,4 @@ function arrows(e) {
 
 door.addEventListener('click', openDoor)
 document.addEventListener('keydown', arrows)
+tick()
