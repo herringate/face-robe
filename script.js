@@ -31,9 +31,10 @@ function checkState(prevState, state) {
         break
       case 2:
         frame.classList.add('zoom300')
+        shelf.classList.remove('hidden')
         break
       case 3:
-        shelf.classList.remove('hidden')
+        
         break
     }
   } else {
@@ -43,9 +44,10 @@ function checkState(prevState, state) {
         break
       case 1:
         frame.classList.remove('zoom300')
+        shelf.classList.add('hidden')
         break
       case 2:
-        shelf.classList.add('hidden')
+        // shelf.classList.add('hidden')
         break
     }
   }

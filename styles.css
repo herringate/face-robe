@@ -3,6 +3,14 @@ body {
 }
 
 /* OBJECTS */
+.room {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: white;
+}
+
 .door {
   width: 80rem;
   height: 70vh;
@@ -19,8 +27,6 @@ body {
   /* padding: 0 0.7rem; */
   margin: 0. 0.7rem;
 }
-
-
 
 .frame {
   border: 2rem dashed #bc88fc;
@@ -49,15 +55,18 @@ body {
 }
 
 .shelf {
-  width: 5rem;
+  width: 80vw;
   height: 2rem;
   background-color: #ad987c;
   position: absolute;
-  top: 100px;
-  right: 100px;
-  bottom: 100px;
-  left: 100px;
+  /* top: 100px; */
+  /* right: -50%; */
+  bottom: 75rem;
+  /* left: 50%; */ */
+  margin: 0 auto;
+  transition: 10s ease;
 }
+
 
 /* STATES */
 
@@ -76,25 +85,10 @@ body {
   animation-direction: alternate;
 }
 
-
-
-.room {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  background-color: white;
-}
-
-
-
 .hidden {
-  display: none;
+  /* display: none; */
+  opacity: 0;
 }
-
-/* .handle-inner:hover {
-  background-color: inherit;
-} */
 
 
 /* ANIMATION */
