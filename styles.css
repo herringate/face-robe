@@ -34,15 +34,15 @@ body {
   box-shadow: 0rem 0rem 5rem 4rem #88fcca;
   transition: transform 3s ease;
   cursor: crosshair;
+  /* transition: background-color 5s ease; */
 }
 
 .handle {
-  width: 10rem;
   height: 3rem;
   background-color: transparent;
   transition: transform 0.3s ease;
   transform-origin: center left;
-  margin-left: 12rem;
+  margin-left: 40rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,21 +50,48 @@ body {
 
 .handle-inner {
   background-color: #bc88fc;
-  width: 10rem;
+  width: 12rem;
   height: 2rem;
 }
 
 .shelf {
   width: 80vw;
-  height: 2rem;
+  height: 3rem;
   background-color: #ad987c;
   position: absolute;
-  /* top: 100px; */
-  /* right: -50%; */
   bottom: 75rem;
-  /* left: 50%; */ */
   margin: 0 auto;
   transition: 10s ease;
+}
+
+.bottle {
+  position: absolute;
+  bottom: 82rem;
+  margin: 0 auto;
+  transition: 10s ease;
+  
+}
+
+.cap {
+  height: 10rem;
+  border: 1.5rem solid black;
+  border-radius: 1rem;
+  border-bottom-left-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+  border-bottom: none;
+  z-index: 100;
+}
+
+.container {
+ height: 50rem;
+ width: 20rem;
+ border: 1.5rem solid black;
+ 
+ /* box-shadow: 1rem 0 2rem #88fcca; */
+}
+
+.wash {
+  background-color: #88fcca;
 }
 
 
@@ -88,6 +115,10 @@ body {
 .hidden {
   /* display: none; */
   opacity: 0;
+}
+
+.white {
+  background-color: white;
 }
 
 

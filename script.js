@@ -2,7 +2,10 @@ var
   door = document.getElementsByClassName('door')[0],
   frame = document.getElementsByClassName('frame')[0],
   handle = document.getElementsByClassName('handle')[0],
-  shelf = document.getElementsByClassName('shelf')[0]
+  shelf = document.getElementsByClassName('shelf')[0],
+  clear = document.getElementsByClassName('bottle')[0]
+  wash = document.getElementsByClassName('bottle')[1]
+  sorb = document.getElementsByClassName('bottle')[2]
 
 var    
   doorIsOpen = false,
@@ -32,6 +35,10 @@ function checkState(prevState, state) {
       case 2:
         frame.classList.add('zoom300')
         shelf.classList.remove('hidden')
+        clear.classList.remove('hidden')
+        wash.classList.remove('hidden')
+        sorb.classList.remove('hidden')
+        frame.classList.add('white')
         break
       case 3:
         
