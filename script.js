@@ -4,21 +4,65 @@ var
   handle = document.getElementsByClassName('handle')[0]
 var    
   doorIsOpen = false,
-  frameIsZoomed = false
+  frameIsZoomed = false,
+  state = 0
 
-function openDoor() {
-  door.classList.add('open')
+function tick() {
+  const prevState = state
+  state++
+  checkState(prevState, state)
 }
 
-function zoomFrame() {
-  console.log('zoomframe')
-  if (doorIsOpen) {
-    frame.classList.add('zoomFrame')
+function tickBack() {
+  const prevState = state
+  state--
+  checkState(prevState, state)
+}
+
+function checkState(prevState, state) {
+  console.log('check state')
+  if (state > prevState) {
+    console.log('tick forward')
+    switch(state) {
+      case 1:
+        door.classList.add('open')
+        break
+      case 2:
+        frame.classList.add('zoom300')
+        break
+    }
   } else {
-    doorIsOpen = true
-    console.log('doorisopen')
+    switch(state) {
+      case 0:
+        door.classList.remove('open')
+      case 1:
+        frame.classList.remove('zoom300')
+      case 2:
+        zoomFrame()
+    }
   }
 }
 
-door.onclick = openDoor
-frame.onclick = zoomFrame
+function openDoor() {
+  if (state == 0) {
+    console.log('open door')
+    tick()
+  }
+}
+
+
+
+function arrows(e) {
+  console.log(e.code)
+
+  if (e.code == 'ArrowRight' | e.code == 'Space') {
+    tick()
+  } 
+
+  if (e.code == 'ArrowLeft') {
+    tickBack()
+  }
+}
+
+door.addEventListener('click', openDoor)
+document.addEventListener('keydown', arrows)

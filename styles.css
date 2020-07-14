@@ -30,7 +30,7 @@ body {
   transform: perspective(100rem) rotateY(-90deg);
 }
 
-.zoomFrame {
+.zoom300 {
   transform: scale(300%);
 }
 
