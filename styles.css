@@ -90,8 +90,24 @@ body {
  /* box-shadow: 1rem 0 2rem #88fcca; */
 }
 
+.left {
+  left: 40rem;
+}
+
+.right {
+  right: 40rem;
+}
+
+.clear {
+  background-color: #9ffafc;
+}
+
 .wash {
   background-color: #88fcca;
+}
+
+.sorb {
+  background-color: #fce59f;
 }
 
 
