@@ -1,5 +1,5 @@
 body {
-  background-color: white;  
+  overflow: hidden;  
 }
 
 .door {
@@ -14,7 +14,7 @@ body {
   
   /* transform: perspective(5rem); */
   transform-origin: center left;
-  transition: transform 1s ease;
+  transition: transform 2s ease;
   /* padding: 0 0.7rem; */
   margin: 0. 0.7rem;
 }
@@ -24,19 +24,21 @@ body {
   /* transform: rotate3d(0, -2, 0, -0.2turn) perspective(5rem); */
   /* transform: translateX(-12.5rem) rotate3d(0, -2, 0, -0.2turn); */
   /* perspective: 20rem; */
-  transform: perspective(100rem) rotateY(-85deg);
+}
+
+.open {
+  transform: perspective(100rem) rotateY(-87deg);
+}
+
+.zoomFrame {
+  transform: scale(300%);
 }
 
 .frame {
   border: 0.7rem dashed #bc88fc;
   background-color: #88fcca;
   box-shadow: 0rem 0rem 5rem 4rem #88fcca;
-  transition: transform 2s ease;
-}
-
-.frame:hover {
-  transform: none;
-  /* transform: scale(300%) */
+  transition: transform 3s ease;
 }
 
 .wiggle {
