@@ -30,8 +30,8 @@ body {
 
 .frame {
   border: 2rem dashed #bc88fc;
-  background-color: #88fcca;
-  box-shadow: 0rem 0rem 5rem 4rem #88fcca;
+  /* background-color: #88fcca; */
+  /* box-shadow: 0rem 0rem 5rem 4rem #88fcca; */
   transition: transform 3s ease;
   cursor: crosshair;
   /* transition: background-color 5s ease; */
@@ -56,16 +56,20 @@ body {
 
 .shelf {
   width: 80vw;
-  height: 3rem;
-  background-color: #ad987c;
+  height: 70rem;
+  /* background-color: #ad987c; */
   position: absolute;
   bottom: 75rem;
   margin: 0 auto;
   transition: 10s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3rem solid #ad987c;
 }
 
 .bottle {
-  position: absolute;
+  /* position: absolute; */
   bottom: 82rem;
   margin: 0 auto;
   transition: 10s ease;
@@ -86,28 +90,12 @@ body {
  height: 50rem;
  width: 20rem;
  border: 1.5rem solid black;
- 
+ font-size: 15em;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-family: rusty;
  /* box-shadow: 1rem 0 2rem #88fcca; */
-}
-
-.left {
-  left: 40rem;
-}
-
-.right {
-  right: 40rem;
-}
-
-.clear {
-  background-color: #9ffafc;
-}
-
-.wash {
-  background-color: #88fcca;
-}
-
-.sorb {
-  background-color: #fce59f;
 }
 
 
@@ -118,7 +106,7 @@ body {
 }
 
 .zoom300 {
-  transform: scale(300%);
+  transform: scale(500%);
 }
 
 .wiggle {
@@ -135,6 +123,26 @@ body {
 
 .white {
   background-color: white;
+}
+
+.left {
+  left: 100rem;
+}
+
+.right {
+  right: 100rem;
+}
+
+.clear {
+  background-color: #9ffafc;
+}
+
+.wash {
+  background-color: #88fcca;
+}
+
+.sorb {
+  background-color: #fce59f;
 }
 
 
@@ -155,4 +163,28 @@ body {
   to {
     transform: rotate(20deg);
   }
+}
+
+@font-face {
+  font-family: 'rusty';
+  src: url('fonts/introrustg-base2line-webfont.woff2') format('woff2'),
+       url('fonts/introrustg-base2line-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'scriptr';
+  src: url('fonts/introscriptr-h2base-webfont.woff2') format('woff2'),
+       url('fonts/introscriptr-h2base-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'headr';
+  src: url('fonts/introheadr-base-webfont.woff2') format('woff2'),
+       url('fonts/introheadr-base-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
