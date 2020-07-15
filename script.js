@@ -18,6 +18,12 @@ function tick() {
   checkState(prevState, state)
 }
 
+function ticks(ticks) {
+  for (let i = 0; i < ticks; i++) {
+    tick()
+  }
+}
+
 function tickBack() {
   const prevState = state
   state--
@@ -31,6 +37,7 @@ function checkState(prevState, state) {
     switch(state) {
       case 1:
         door.classList.add('open')
+        shelf.classList.remove('hidden')
         break
       case 2:
         frame.classList.add('zoom300')
@@ -39,6 +46,7 @@ function checkState(prevState, state) {
         wash.classList.remove('hidden')
         sorb.classList.remove('hidden')
         frame.classList.add('white')
+        shelf.classList.remove('distant')
         break
       case 3:
         
@@ -83,4 +91,4 @@ function arrows(e) {
 
 door.addEventListener('click', openDoor)
 document.addEventListener('keydown', arrows)
-tick()
+ticks(1)

@@ -61,11 +61,21 @@ body {
   position: absolute;
   bottom: 75rem;
   margin: 0 auto;
-  transition: 10s ease;
+  transition-property: scale, opacity;
+  transition-duration: 3s, 4s;
+  transition-delay: 0s, 0.8s;
+  transition-timing-function: ease;
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: 3rem solid #ad987c;
+  
+  
+ 
+  /* transition-property: opacity, transform;  
+  transition: transform 3s ease;
+  transition-delay: 1s, 1s;
+  transition: opacity 5s ease; */
 }
 
 .bottle {
@@ -100,6 +110,10 @@ body {
 
 
 /* STATES */
+
+.distant  {
+  scale: 0.2;
+}
 
 .open {
   transform: perspective(300rem) rotateY(-90deg);
