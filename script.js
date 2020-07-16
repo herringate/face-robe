@@ -41,10 +41,10 @@ function checkState(prevState, state) {
         break
       case 2:
         frame.classList.add('zoom300')
-        shelf.classList.remove('hidden')
-        clear.classList.remove('hidden')
-        wash.classList.remove('hidden')
-        sorb.classList.remove('hidden')
+        // shelf.classList.remove('hidden')
+        // clear.classList.remove('hidden')
+        // wash.classList.remove('hidden')
+        // sorb.classList.remove('hidden')
         frame.classList.add('white')
         shelf.classList.remove('distant')
         break
