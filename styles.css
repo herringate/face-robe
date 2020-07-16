@@ -13,8 +13,8 @@ body {
 
 .door {
   background-color: #7efcf4;
-  width: 20rem;
-  height: 60vh;
+  width: 70vw;
+  height: 70vh;
   border: 0.5rem solid #bc88fc;
   background-color: white;
   display: flex;
@@ -43,8 +43,8 @@ body {
 .sign {
   color: #88fcca;
   background-color: white;
-  height: 3.5rem;
-  width: 7rem;
+  height: 5vh;
+  width: 12vw;
   transform-origin: 3.5rem -0.8rem;
   border: .3rem solid #88fcca;
   top: 7rem;
@@ -52,7 +52,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: scripty;
-  font-size: 1.5rem;
+  font-size: 3rem;
   position: relative;
   /* z-index: 0; */
 }
