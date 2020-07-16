@@ -4,17 +4,18 @@ body {
 
 /* OBJECTS */
 .room {
+    background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-color: white;
 }
 
 .door {
-  width: 80rem;
-  height: 70vh;
-  border: 2rem solid #bc88fc;
+  background-color: #7efcf4;
+  width: 20rem;
+  height: 60vh;
+  border: 0.5rem solid #bc88fc;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -30,7 +31,7 @@ body {
 }
 
 .frame {
-  border: 2rem dashed #bc88fc;
+  border: 0.5rem dashed #bc88fc;
   /* background-color: #88fcca; */
   /* box-shadow: 0rem 0rem 5rem 4rem #88fcca; */
   transition: transform 3s ease;
@@ -42,46 +43,47 @@ body {
 .sign {
   color: #88fcca;
   background-color: white;
-  height: 10rem;
-  width: 20rem;
-  transform-origin: 10rem -3.8rem;
-  border: 1rem solid #88fcca;
-  top: 35rem;
+  height: 3.5rem;
+  width: 7rem;
+  transform-origin: 3.5rem -0.8rem;
+  border: .3rem solid #88fcca;
+  top: 7rem;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: scripty;
-  font-size: 5rem;
+  font-size: 1.5rem;
   position: relative;
   /* z-index: 0; */
 }
 
 .string {
   color: #88fcca;
-  height: 3rem;
-  width: 3rem;
-  border: 1rem solid #88fcca;
-  border-radius: 3rem;
+  height: 0.5rem;
+  width: 0.5rem;
+  border: 0.3rem solid #88fcca;
+  border-radius: 0.3rem;
   border-bottom: 0rem;
   position: absolute;
-  top: -3.8rem;
+  top: -.8rem;
   /* z-index: 0; */
 }
 
 .handle {
-  height: 3rem;
+  height: 0rem;
+  width: 0rem;
   background-color: transparent;
   transition: transform 0.3s ease;
   transform-origin: center left;
   position: relative;
   margin: auto;
-  margin-right: 15rem;
+  margin-left: 13rem;
 }
 
 .handle-inner {
   background-color: #bc88fc;
-  width: 12rem;
-  height: 2rem;
+  width: 3rem;
+  height: .5rem;
 }
 
 .shelf {
@@ -202,7 +204,7 @@ body {
 
 .blow {
   transform: rotate(-10deg);
-  animation-duration: 5s;
+  animation-duration: 1.6s;
   animation-name: blow;
   animation-iteration-count: infinite;
   animation-direction: alternate;
